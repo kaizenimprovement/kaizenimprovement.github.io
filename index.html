@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Kaizen - Continuous Improvement</title>
+<meta name="viewport" content="width=divice-width, initial-scale=1.0">
+<link rel="stylesheet" href="blueberry.css">
+<style type="text/css">
+*{
+margin: 0;
+border: 0;
+padding: 0;
+}
+body {
+background: #f0f0f0;
+font: 14px/20px Arial, San-Serif;
+color: #555;
+margin: 0;
+}
+h1 {
+text-align: center;
+font-size: 180%;
+line-height: 120%;
+padding: 0;
+}
+h2 {
+text-decoration: underline;
+line-height: 280%;
+padding-left: 2%;
+}
+p {
+padding: 1%;
+}
+img {
+text-align: center;
+max-width: 100%;
+height: auto;
+width: auto;
+}
+a {
+color: #FFF;
+text-decoration: none;
+font-weight: bold;
+}
+a:hover {
+color: #FFF;
+text-decoration: underline;
+background-color: red;
+}
+header {
+background: #405580;
+width: 100%;
+height: 86px;
+position: fixed;
+top: 0;
+left: 0;
+z-index: 100;
+opacity: 0.90;
+}
+nav {
+float: right;
+padding: 35px 20px 20px 0;
+}
+#menu-icon {
+display: hidden;
+height: 40px;
+width: 40px;
+background: url(http://www.w3newbie.com/wp-content/uploads/icon.png) center;
+}
+a:hover#menu-icon {
+border-radius: 4px 4px 0 0;
+}
+ul {
+list-style: none;
+}
+nav ul li {
+display: inline-block;
+float: left;
+padding: 10px;
+}
+/*My Additions start here*/
+nav ul li ul li{
+display: none;
+background-color: white;
+border: 1px solid white;
+width: 120px;
+height: 120px;
+line-height: 30px;
+float: left;
+text-align: center;
+list-style: none;
+color: blue;
+}
+nav ul li:hover ul li{
+display: block;
+}
+/*My Additions end here*/
+.current {
+color: #FFF;
+text-decoration: underline;
+}
+#doc {
+margin: 40px 0;
+}
+#content {
+margin: 0 auto;
+max-width: 1140px;
+margin-top: 90px;
+}
+.blueberry {
+max-width: 960px;
+margin-top: 10px;
+}
+section {
+width: 29%;
+float: left;
+margin: 2% 2%;
+tex-align: center;
+}
+.clear {
+clear: both;
+}
+article {
+float: left;
+margin: 0 auto;
+width: 50%;
+height: auto;
+padding: 4%;
+}
+aside {
+float: right;
+margin: 0 auto;
+width: 35%;
+height: auto;
+padding: 3%;
+}
+ul.gym li{
+padding-left: 3%;
+}
+footer {
+background: #333333;
+width: 100%;
+overflow: hidden;
+opacity: 0.90;
+}
+footer p,footer h3 {
+color: #FFF;
+}
+footer p a {
+color: #FFF;
+text-decoration: none;
+}
+ul.social li {
+display: inline;
+}
+ul.social li img{
+height: 50px;
+}
+footer.second {
+border-top: 1px solid #404E50;
+color: #FFF;
+text-decoration: none;
+tex-align: center;
+}
+
+/*********************MEDIA!!!*************/
+@media screen and (max-width: 740px) {
+header {
+position: absolute;
+}
+#menu-icon{
+display: inline-block;
+}
+nav ul, nav:active ul{
+display: none;
+position: absolute;
+padding: 20px;
+background: #405580;
+border: 1px solid #FFF;
+right: 20px;
+top: 60px;
+width: 50%;
+border-radius: 2px 0 2px 2px;
+}
+nav li {
+text-align: center;
+width: 100%;
+padding: 10px 0;
+margin: 0;
+}
+nav: hover ul {
+display: block;
+}
+section {
+float: left;
+width: 100%;
+height: 40%;
+margin: 0;
+padding: 0;
+}
+article {
+float: left;
+width: 100%;
+margin: 0;
+padding: 0;
+}
+aside {
+float: left;
+width: 100%;
+margin: 0;
+padding: 0;
+}
+}
+ </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+<script src="jquery.blueberry.js"></script>
+<script>
+$(window).load(function(){
+$('.blueberry').blueberry();
+});
+</script>
+</head>
+
+<body>
+<header>
+<section><a href="#" style="font-size: 400%"><p padding-top: 3px>Kaizen</p></a> 
+</section>
+<nav>
+<a href="#" id="menu-icon"></a>
+<ul>
+<li><a href="index.html" class="current">Home</a></li>
+<li><a href="#"> About Us </a>
+<ul>
+<li>Leonard Matiza is the author.
+</ul>
+</li>
+<li><a href="#"> Vision </a>
+<ul>
+<li>To deliver innovate solutions which solve business problems.
+</ul>
+</li>
+<li><a href="#"> Contact Us</a>
+<ul>
+<li>Whatsapp on +263 773021407
+</ul>
+</li>
+</ul>
+</nav>
+</header>
+
+<div id="doc">
+<div id="content">
+<h1 style="color: blue">Quote of the day: To whom much is given, much is expected! </h1>
+<section style="width: 40%">
+<div class="blueberry">
+<ul class="slides">
+<li><img src="bench.jpg"/></li>
+<li><img src="meetings.jpg"/></li>
+<li><img src="steps1.jpg"/></li>
+<li><img src="smart.jpeg"/></li>
+</ul>
+</div>
+</section>
+<section style="width: 25%">
+<h1>Poll</h1>
+<script type="text/javascript" charset="utf-8" src="http://static.polldaddy.com/p/9589991.js"></script>
+<noscript><a href="http://polldaddy.com/poll/9589991/">Should Leonard continue with web design?</a></noscript>
+<h1>Thanks for exercising your right to vote!</h1>
+</section>
+</div>
+<div class="clear"></div>
+<section>
+<h1>Mobile learning apps</h1>
+<img src="performance.jpg" />
+<p> Simple offline learning apps which serve to enhance retention and provide easy reference when needed. Once installed these apps require no internet access and can be used forever.</p>
+</section>
+<section>
+<h1>Desktop Games</h1>
+<img src="kenai.jpg"/>
+<p>High end 3D games with fully controllable characters in epic gaming worlds. These educate and entertain the whole family.</p>
+</section>
+<section>
+<h1>Web Applications</h1>
+<a href="Build/ZimCities.html"><img src="zimcities.jpg"/></a>
+<p>Centralised servers host high performance applications which are used from education to gaming and entertainment. Try out the ZimCities educational game by clicking the game picture.</p>
+</section>
+
+<footer>
+<section>
+<h3><b>Kaizen Development Studio</b></h3><br>
+<p><b>+263 773 201 407</b><br><br>
+112 Park Lane<br>
+Harare<br>
+<br>
+KaizenDevelopmentStudio@gmail.com</p>
+</section>
+
+<section>
+<h3><b>Connect With Us</b></h3>
+<ul class="social">
+<li><a href="#"><img src="http://www.w3newbie.com/wp-content/uploads/youtube1.png"/></a></li>
+<li><a href="#"><img src="linkedin.jpeg"/></a></li>
+<li><a href="#"><img src="http://www.w3newbie.com/wp-content/uploads/twitter1.png"/></a></li>
+<li><a href="#"><img src="http://www.w3newbie.com/wp-content/uploads/facebook1.png"/></a></li>
+<li><a href="#"><img src="http://www.w3newbie.com/wp-content/uploads/googleplus.png"/></a></li>
+</ul>
+</section>
+
+<section>
+<img src="calm.png"/>
+</section>
+</footer>
+<footer style="color: white">All rigths reserved. &copy Copyright - Kaizen Development Studio 2016</footer>
+</body>
+</html>
