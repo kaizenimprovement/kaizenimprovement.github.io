@@ -14,7 +14,7 @@ padding: 0;
 body {
 background: #f0f0f0;
 font: 14px/20px Arial, San-Serif;
-color: #555;
+color: black;
 margin: 0;
 }
 h1 {
@@ -65,7 +65,7 @@ padding: 35px 20px 20px 0;
 display: hidden;
 height: 40px;
 width: 40px;
-background: url(http://www.w3newbie.com/wp-content/uploads/icon.png) center;
+background: url(menuicon1.png) center;
 }
 a:hover#menu-icon {
 border-radius: 4px 4px 0 0;
@@ -162,6 +162,13 @@ color: #FFF;
 text-decoration: none;
 tex-align: center;
 }
+#pop{
+border: 2px solid;
+padding: 5px 5px 5px 5px;
+color: green;
+display: none;
+z-index: 200;
+}
 
 /*********************MEDIA!!!*************/
 @media screen and (max-width: 740px) {
@@ -219,6 +226,7 @@ $(window).load(function(){
 $('.blueberry').blueberry();
 });
 </script>
+</script>
 </head>
 
 <body>
@@ -262,10 +270,21 @@ $('.blueberry').blueberry();
 </div>
 </section>
 <section style="width: 25%">
+<table style="border: 2px solid" z-index: 200 align="center"><tr><td colspan="2" align="center">
 <h1>Poll</h1>
-<script type="text/javascript" charset="utf-8" src="http://static.polldaddy.com/p/9589991.js"></script>
-<noscript><a href="http://polldaddy.com/poll/9589991/">Should Leonard continue with web design?</a></noscript>
-<h1>Thanks for exercising your right to vote!</h1>
+<form  method="post" action=""/>
+<p><h3>Should Leonard continue with web design?</h3></p>
+<p> <input type="radio" name="response" value="yes"/> Yes</p><br>
+<p> <input type="radio" name="response" value="no"/> No</p><br>
+<table style="border: 2px solid" z-index: 200 align="center">
+<tr>
+<td colspan="2" align="center"><input type="submit" name="submit" value="Submit Vote" onclick="document.getElementById('pop').style.display='block';"/></td>
+</tr></table>
+</td></tr></table>
+</form>
+<!--Polldaddy
+<noscript><a href="http://polldaddy.com/poll/9589991/">Should Leonard continue with web design?</a></noscript>-->
+<h3 id="pop">Thanks for voting!</h3>
 </section>
 </div>
 <div class="clear"></div>
@@ -280,7 +299,7 @@ $('.blueberry').blueberry();
 <p>High end 3D games with fully controllable characters in epic gaming worlds. These educate and entertain the whole family.</p>
 </section>
 <section>
-<h1>Web Applications</h1>
+<a href="Build/ZimCities.html"><h1 style="color: black">Web Applications</h1></a>
 <a href="Build/ZimCities.html"><img src="zimcities.jpg"/></a>
 <p>Centralised servers host high performance applications which are used from education to gaming and entertainment. Try out the ZimCities educational game by clicking the game picture.</p>
 </section>
@@ -298,11 +317,11 @@ KaizenDevelopmentStudio@gmail.com</p>
 <section>
 <h3><b>Connect With Us</b></h3>
 <ul class="social">
-<li><a href="#"><img src="http://www.w3newbie.com/wp-content/uploads/youtube1.png"/></a></li>
+<li><a href="#"><img src="youtube1.png"/></a></li>
 <li><a href="#"><img src="linkedin.jpeg"/></a></li>
-<li><a href="#"><img src="http://www.w3newbie.com/wp-content/uploads/twitter1.png"/></a></li>
-<li><a href="#"><img src="http://www.w3newbie.com/wp-content/uploads/facebook1.png"/></a></li>
-<li><a href="#"><img src="http://www.w3newbie.com/wp-content/uploads/googleplus.png"/></a></li>
+<li><a href="#"><img src="twitter1.png"/></a></li>
+<li><a href="#"><img src="facebook1.png"/></a></li>
+<li><a href="#"><img src="googleplus.png"/></a></li>
 </ul>
 </section>
 

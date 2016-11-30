@@ -66,15 +66,6 @@ left: 0;
 z-index: 100;
 opacity: 0.90;
 }
-
-#logo {
-margin: 20px;
-float: left;
-height: 60px;
-width: 200px;
-background: url(http://www.w3newbie.com/wp-content/uploads/the-gym.png) no-repeat center;
-}
-
 nav {
 float: right;
 padding: 35px 20px 20px 0;
@@ -84,7 +75,7 @@ padding: 35px 20px 20px 0;
 display: hidden;
 height: 40px;
 width: 40px;
-background: url(http://www.w3newbie.com/wp-content/uploads/icon.png) center;
+background: passport2.png center;
 }
 
 a:hover#menu-icon {
@@ -113,6 +104,18 @@ color: blue;
 }
 nav ul li:hover ul li{
 display: block;
+}
+#pop{
+height: 300px;
+width: 300px;
+position: fixed;
+bottom: 20%;
+right: 20%;
+border: 2px solid;
+padding: 200px 200px 200px 200px;
+background: #FFF;
+border-radius: 9px;
+z-index: 200;
 }
 /*My Additions end here*/
 
@@ -217,11 +220,32 @@ tex-align: center;
     <p class="header"><span>Unity WebGL Player | </span>ZimCities</p>
     <div class="template-wrap clear">
 	<div style="margin-top: 80px">
+	<!--CountDownTimer-->
+	<script>
+function countDown(secs,elem) {
+	var element = document.getElementById(elem);
+	element.innerHTML ='<h1 center><b>Wait,</b> '+secs+' seconds for Game to start</b></h1>';
+	if(secs < 1) {
+		clearTimeout(timer);
+		element.innerHTML = '<h1>Click to Play!</h1>';
+			}
+	secs--;
+	var timer = setTimeout('countDown('+secs+',"'+elem+'")',1000);
+}
+</script>
+
+
+<!--Pop UP starts here-->
+<div id="pop" onclick="document.getElementById('pop').style.display='none'" style="height:100px">
+<div id="status"></div>
+<h1 center><b><script>countDown(10,"status");</script><br><br><br></b></h1>
+<h1 center><b>.........</b></h1>
+</div>
+<!--Pop Up ends here-->
       <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="580px" width="960px"></canvas>
-      <br>
-      
+      <br>      
       <div class="fullscreen"><img src="TemplateData/fullscreen.png" width="38" height="38" alt="Fullscreen" title="Fullscreen" onclick="SetFullscreen(1);" /></div>
-      <div class="title">Our ZimCities</div>
+      <b>Instruction: Click on the map location you want to move to.</b><div class="title">ZimCities Game</div>
     </div>
     <p class="footer">&laquo; created with <a href="http://unity3d.com/" title="Go to unity3d.com">Unity</a> &raquo;</p>
     <script type='text/javascript'>
